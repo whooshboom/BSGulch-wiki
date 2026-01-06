@@ -1,0 +1,140 @@
+:root {
+  --title-light: #5b6981;
+  --title-accent-light: #333e50;
+  --title-text-light: #f1f1e6;
+
+  --page-back-light: #d4d4d2;
+  --page-section-light: #bbbbb5;
+  --page-emphasis-light: #a1a19c;
+  --section-text-light: #353532;
+  --emphasis-text-light: #131312;
+
+  --style-redwarn-light: #810909;
+
+  --heading-mar-vert: 0px;
+  --heading-mar-hor: 1vw;
+  --text-mar-vert: 0px;
+  --text-mar-hor: 1vw;
+
+  background-color: var(--page-back-light);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+}
+
+.redwarn {
+  color: var(--style-redwarn-light);
+  font-weight: 600;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  max-height: calc(4rem + 2vw);
+}
+
+.head-text-group {
+  display: flex;
+  flex-direction: row;
+  max-height: fit-content;
+  width: 100vw;
+  background-color: var(--title-light);
+  color: var(--title-text-light);
+  gap: calc(0.2rem + 0.5vw);
+  padding: 0.75vw;
+  justify-content: top;
+  align-items: stretch;
+}
+
+.header h1 {
+  font-size: calc(1.75rem + 1.6vw);
+  line-height: 0.9;
+  padding: 0;
+  margin: 0;
+}
+
+.header h2 {
+  font-size: calc(1.5rem + 0.25vw);
+  line-height: 1;
+  margin: 0;
+}
+
+.header h3 {
+  font-size: calc(0.9rem + 0.25vw);
+  line-height: 1.2;
+  margin: 0;
+  width: 100%;
+}
+
+.header-sub {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: end;
+  gap: calc(1px + 0.15vw);
+}
+
+.decor-divider {
+  background-color: var(--title-accent-light);
+  height: 5px;
+}
+
+.footer{
+  padding: calc(0.25vw + 4px);
+  justify-content: center;
+  background-color: var(--title-light);
+  color: var(--title-text-light);
+}
+
+.footer h3 {
+  line-height: 1.1;
+  font-weight: 500;
+  font-size: calc(0.9rem + 0.1vw);
+  margin: 0
+}
+
+.unheaded-area{
+  flex: 1
+}
+
+
+.content {
+  margin: 0;
+}
+
+.content h3 {
+  font-size: 1.5em;
+  margin: 0
+}
+
+.content p {
+  margin: 0
+}
+
+.emphasis-block {
+  display: flex;
+  flex-direction: column;  
+  background-color: var(--page-emphasis-light);
+  color: var(--emphasis-text-light);
+  margin: calc(0.75vh + 0.75vw);
+  gap: 1vh;
+  padding: 1vh;
+}
+
+  .content-block {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--page-section-light);
+  color: var(--section-text-light);
+  margin: calc(0.75vh + 0.75vw);
+  gap: 1vh;
+  padding: 1vh;
+}

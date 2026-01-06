@@ -31,11 +31,12 @@ jobs:
         with:
           node-version: 22
 
-      # If you use other package managers like yarn or pnpm,
-      # you will need to install them first
       - name: Install dependencies
-        run: pnpm install
-
+        run: npm i
+        
+      - name: Install pnpm
+        run: npm install -g pnpm@latest-10
+        
       - name: Build
         run: pnpm run build
 

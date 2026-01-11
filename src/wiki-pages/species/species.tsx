@@ -4,7 +4,7 @@ const Species = () => {
 return (
   <div className="content">
     <div className="emphasis-block">
-      <h1>Species</h1>
+      <h1 className='backed'>Species</h1>
       <p>
       Many different sapient species have been discovered and incorporated into the work environments of a modern SolGov territory. Many still exist undiscovered and unresearched, as well- hence the growing amount of Xenobiologists aboard our facility. All sapient species are treated equally under SolGov law, though animosities exist between some of them due to past or current conflicts.
       </p>

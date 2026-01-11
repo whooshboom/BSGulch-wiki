@@ -10,7 +10,7 @@ import Welcome from "./wiki-pages/welcome";
 
 import { OOCwarn } from "./CommonBlocks";
 
-const App = () => {
+const Common = () => {
   const [isOpen, setIsOpen] = useState(false);
   function toggleSidebar() {
     setIsOpen(!isOpen);
@@ -49,8 +49,8 @@ const App = () => {
         <div className="sidebar">
           <div className="sidebar-content" style={sidebarStyles}>
             <div className="emphasis-block">
-              <Link to="/technology/bluespace">Bluespace</Link>
-              <Link to="/species/species">Species</Link>
+              <Link to="/BSGulch-wiki/technology/bluespace">Bluespace</Link>
+              <Link to="/BSGulch-wiki/species/species">Species</Link>
             </div>
           </div>
           <button className="sidebar-button" onClick={toggleSidebar} style={sidebuttonStyles}>
@@ -59,9 +59,9 @@ const App = () => {
         </div>
         <div className="route-container">
             <Routes>
-              <Route path="/" element={<Welcome />}></Route>
-              <Route path="/technology/bluespace" element={<Bluespace />}></Route>
-              <Route path="/species/species" element={<Species />}></Route>
+              <Route path="/BSGulch-wiki/" element={<Welcome />}></Route>
+              <Route path="/BSGulch-wiki/technology/bluespace" element={<Bluespace />}></Route>
+              <Route path="/BSGulch-wiki/species/species" element={<Species />}></Route>
             </Routes>
         </div>
       </div>
@@ -74,4 +74,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Common;

@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { createBrowserRouter, BrowserRouter, Routes, Route, Link } from 'react-router';
 import { glob } from "glob";
 import './Common.css';
-import BSLogo from "../public/bslogo.jpg";
+import BSLogo from "../public/bslogo.png";
+
 import Bluespace from "./wiki-pages/technology/bluespace";
 import Species from "./wiki-pages/species/species";
+import Welcome from "./wiki-pages/welcome";
+
 import { OOCwarn } from "./CommonBlocks";
 
 const App = () => {
@@ -30,7 +33,7 @@ const App = () => {
   <BrowserRouter>
     <div className='page-container'>
       <div className="header">
-        <img src={BSLogo}></img>
+        <img src={BSLogo} className="bslogo"></img>
         <div className='head-text-group'>
           <div className="header-sub">
             <h2>Bluestone Gulch</h2>
@@ -56,6 +59,7 @@ const App = () => {
         </div>
         <div className="route-container">
             <Routes>
+              <Route path="/" element={<Welcome />}></Route>
               <Route path="/technology/bluespace" element={<Bluespace />}></Route>
               <Route path="/species/species" element={<Species />}></Route>
             </Routes>

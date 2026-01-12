@@ -164,33 +164,34 @@ body {
   flex: 1;
 }
 
-.content h1 {
+.content :is(h1, h2, h3, p) {
   margin: 0;
+}
+
+.content h1 {
   font-size: 2.5em;
 }
 
-.content h1.backed {
-  background-color: var(--page-title-light);
-  padding: 6px;
-  border-radius: 3px;
-}
-
-.content h3.backed {
-  margin: 0;
-  font-size: 1.25em;
-  background-color: var(--page-title-light);
-  color: var(--emphasis-text-light);
-  padding: calc(6px);
-  border-radius: 3px;
+.content h2 {
+  font-size: 1.5em;
 }
 
 .content h3 {
   font-size: 1.25em;
-  margin: 0
 }
 
-.content p {
-  margin: 0
+.content :is(h1, h2, h3).backed {
+  color: var(--emphasis-text-light);
+  padding: 6px;
+  border-radius: 3px;
+}
+
+.emphasis-block :is(h1, h2, h3).backed {
+  background-color: var(--page-title-light);
+}
+
+.content-block :is(h1, h2, h3).backed {
+  background-color: var(--page-emphasis-light);
 }
 
 .emphasis-block {

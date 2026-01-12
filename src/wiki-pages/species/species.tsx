@@ -11,21 +11,133 @@ return (
       <p><span className='bold'>Note - any species marked "Undiscovered" is OOC information listed for convienence, and your character would know nothing about them that isn't listed under "common knowledge".</span></p>
     </div>
     <div className="content-block">
-      <h3>
-          This is text that we're gonna have a bunch of. Loren Ipsum and their friends were wanting to have a tea party next sunday to test how their text wrapping looked.
-      </h3>
+      <h2 className='backed'>We are the ____ (Plural)</h2>
       <p>
-          2071: Remnants of Egypt, Iran, Saudi Arabia, and Turkey sign the Treat of Niqaba, also known as The Brotherhood Treaty. Bitter and ancient rivalries between the four nations are put to an end with the founding of the United Republic of Mesopotamia. Other surviving Middle Eastern nations including Afghanistan, Bahrain, and Oman eventually join the newly formed Republic. Reconstruction and reform efforts begin across the Middle East. However, oil production in the area remains permanently devastated.
+        This is a template, oorah.
       </p> 
     </div>
     <div className="content-block">
-        <h2>
-            This is text that we're gonna have a bunch of. Loren Ipsum and their friends were wanting to have a tea party next sunday to test how their text wrapping looked.
-        </h2>
-        <p>
-            2071: Remnants of Egypt, Iran, Saudi Arabia, and Turkey sign the Treat of Niqaba, also known as The Brotherhood Treaty. Bitter and ancient rivalries between the four nations are put to an end with the founding of the United Republic of Mesopotamia. Other surviving Middle Eastern nations including Afghanistan, Bahrain, and Oman eventually join the newly formed Republic. Reconstruction and reform efforts begin across the Middle East. However, oil production in the area remains permanently devastated.
-        </p> 
-      </div>
+      <h2 className='backed'>Akula</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Humans</h2>
+      <p>
+        This is a furry server. If you play a human you are missing the point.
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Vulpankin</h2>
+      <p>
+          - Both quads and bipeds <br />
+          - The rest of their lore seems too complicated from chomp
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Tajarans</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Unathi</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Unathi-Dragons</h2>
+      <p>
+        Quadrepedal, failed uplift because they already were uplifted.
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Skrell</h2>
+      <p>
+        Here to be the assholes tbh
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Vox</h2>
+      <p>
+        - Do not understand art.
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Vassilian</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Teshari</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Nevrean</h2>
+      <p>
+        - Pure/Impure uplifts of Skrell?
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Diona</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Sergal</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Promethean</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Integrated Positronics</h2>
+      <p>
+        - Race of positronics living in varied bodies <br />
+        - Take notes from Freefall
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Changelings</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Shadekin</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Xenomorphs</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Proteans</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
+    <div className="content-block">
+      <h2 className='backed'>Xenochimera</h2>
+      <p>
+          TODO
+      </p> 
+    </div>
     </div>
     );
 };

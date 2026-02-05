@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import { createBrowserRouter, BrowserRouter, Routes, Route, Link } from 'react-router';
+import React, { useState, Suspense, lazy } from "react";
+import { createHashRouter, HashRouter, Routes, Route, Link } from 'react-router';
 import { glob } from "glob";
 import './Common.css';
 import BSLogo from "../public/bslogo.png";
 
+import { pageLinks, NavTree } from "./linkage";
+
 import Bluespace from "./wiki-pages/technology/bluespace";
 import Species from "./wiki-pages/species/species";
 import Welcome from "./wiki-pages/welcome";
+import Contributing from "./wiki-pages/contributing";
+import Information_Security from "./wiki-pages/policy-and-paperwork/information-security";
 
 import { OOCwarn } from "./CommonBlocks";
 
@@ -29,11 +33,15 @@ const Common = () => {
     transition: 'transform 0.3s ease-in-out',
   }
 
+  console.log(pageLinks)
+
   return (
-  <BrowserRouter>
+  <HashRouter>
     <div className='page-container'>
       <div className="header">
-        <img src={BSLogo} className="bslogo"></img>
+        <Link to="/">
+          <img src={BSLogo} className="bslogo"></img>
+        </Link>
         <div className='head-text-group'>
           <div className="header-sub">
             <h2>Bluestone Gulch</h2>
@@ -47,10 +55,9 @@ const Common = () => {
       <div className="decor-divider"></div>
       <div className="unheaded-area">
         <div className="sidebar">
-          <div className="sidebar-content" style={sidebarStyles}>
-            <div className="emphasis-block">
-              <Link to="/BSGulch-wiki/technology/bluespace">Bluespace</Link>
-              <Link to="/BSGulch-wiki/species/species">Species</Link>
+          <div className="sidebar-area" style={sidebarStyles}>
+            <div className="sidebar-content">
+              <NavTree />
             </div>
           </div>
           <button className="sidebar-button" onClick={toggleSidebar} style={sidebuttonStyles}>
@@ -58,11 +65,18 @@ const Common = () => {
           </button>
         </div>
         <div className="route-container">
+          <Suspense fallback={<div>Loading Page...</div>}>
             <Routes>
-              <Route path="/BSGulch-wiki/" element={<Welcome />}></Route>
-              <Route path="/BSGulch-wiki/technology/bluespace" element={<Bluespace />}></Route>
-              <Route path="/BSGulch-wiki/species/species" element={<Species />}></Route>
+              {Object.entries(pageLinks).map(([path, Component]) => (
+                <Route 
+                  key={path} 
+                  path={`/${path}`} 
+                  element={<Component />}
+                  />
+              ))}
+              <Route path='*' element={<div>shits fucked my guy</div>}></Route>
             </Routes>
+          </Suspense>
         </div>
       </div>
       <div className="decor-divider"></div>
@@ -70,7 +84,7 @@ const Common = () => {
         <h3>All listed information is subject to the indicated information security policy. Sharing of secured information to unauthorized personnel is punishable accordingly, <span className="redwarn">up to and including committee-ordained imprisonment.</span></h3>
       </div>
     </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

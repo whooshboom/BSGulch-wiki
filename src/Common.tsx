@@ -1,17 +1,16 @@
 import React, { useState, Suspense, lazy } from "react";
-import { createHashRouter, HashRouter, Routes, Route, Link } from 'react-router';
-import { glob } from "glob";
+import { HashRouter, Routes, Route, Link, Navigate } from 'react-router';
 import './Common.css';
 import BSLogo from "../public/bslogo.png";
 
 import { pageLinks, NavTree } from "./linkage";
 
-import Bluespace from "./wiki-pages/technology/bluespace";
-import Species from "./wiki-pages/species/species";
-import Welcome from "./wiki-pages/welcome";
-import Contributing from "./wiki-pages/contributing";
-import Information_Security from "./wiki-pages/policy-and-paperwork/information-security";
-
+/* TODO:
+  - add loading, 404 pages.
+  - Redirect to the welcome page on entry.
+  - Fix animated parts on resize/slide.
+  - Fix header/footer not covering everything on slide.
+*/
 import { OOCwarn } from "./CommonBlocks";
 
 const Common = () => {
@@ -29,8 +28,7 @@ const Common = () => {
   const sidebuttonStyles: React.CSSProperties = {
     transform: isOpen
       ? 'translateX(0)'
-      : 'translateX(calc(-80vw + 10px))',
-    transition: 'transform 0.3s ease-in-out',
+      : 'translateX(calc(-80vw + 10px))'
   }
 
   console.log(pageLinks)
@@ -39,7 +37,7 @@ const Common = () => {
   <HashRouter>
     <div className='page-container'>
       <div className="header">
-        <Link to="/">
+        <Link to="/welcome">
           <img src={BSLogo} className="bslogo"></img>
         </Link>
         <div className='head-text-group'>
@@ -57,6 +55,14 @@ const Common = () => {
         <div className="sidebar">
           <div className="sidebar-area" style={sidebarStyles}>
             <div className="sidebar-content">
+              <div className="sidebar-category">
+                <div className="nav-category">
+                  Important Resources:
+                </div>
+                <div className="nav-link-container"><Link className="nav-link" to={"./welcome"}>Welcome & About Bluestone</Link></div>
+                <div className="nav-link-container"><Link className="nav-link" to={"./contributing"}>Contributing</Link></div>
+                <div className="nav-link-container"><Link className="nav-link" to={"./welcome"}>Rules (unmade)</Link></div>
+              </div>
               <NavTree />
             </div>
           </div>
@@ -74,6 +80,7 @@ const Common = () => {
                   element={<Component />}
                   />
               ))}
+              <Route path="/" element={<Navigate to="/welcome" replace />} />
               <Route path='*' element={<div>shits fucked my guy</div>}></Route>
             </Routes>
           </Suspense>

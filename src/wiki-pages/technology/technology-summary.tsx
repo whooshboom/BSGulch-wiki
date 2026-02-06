@@ -1,8 +1,8 @@
 import '../../Common.css';
 
-const Types = () => {
+const TechSummary = () => {
 return (
   <div className='emphasis-block'><h3>Pardon our dust, this page isn't complete yet.</h3></div>
 )};
 
-export default Types
+export default TechSummary

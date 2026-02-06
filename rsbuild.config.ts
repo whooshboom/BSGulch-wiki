@@ -7,4 +7,8 @@ export default defineConfig({
   output: {
     assetPrefix: '/BSGulch-wiki/',
   },
+  html: {
+    title: 'Bluestone Wiki',
+    favicon: './public/bslogo.ico'
+  },
 });

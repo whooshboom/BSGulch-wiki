@@ -8,6 +8,8 @@
   --page-section-light: #bbbbb5;
   --page-emphasis-light: #a1a19c;
   --page-title-light: #85857f;
+  --section-text-light: #444440;
+  --emphasis-text-light: #20201e;
 
   --sidebar-back-light: #353533;
   --sidebar-mouseover-light: #44443f;
@@ -17,10 +19,9 @@
   --sidebar-text-unvisited: #161615;
   --sidebar-text-visited: #20201e;
 
-  --section-text-light: #444440;
-  --emphasis-text-light: #20201e;
-
   --style-redwarn-light: #810909;
+  --style-link-unvisited: #3260a8;
+  --style-link-visited: #325083;
 
   --thin-border: 5px;
 
@@ -29,9 +30,9 @@
   font-size: 14px;
 }
 
-body {
-  margin: 0;
-}
+/*
+  Text Modifiers
+*/
 
 .redwarn {
   color: var(--style-redwarn-light);
@@ -42,11 +43,41 @@ body {
   font-weight: 600;
 }
 
+/*
+  Page Setup
+*/
+
+body {
+  margin: 0;
+}
+
 .page-container{
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
+
+/*
+  Common Elements
+*/
+
+.decor-divider {
+  background-color: var(--title-accent-light);
+  height: var(--thin-border);
+  z-index: 1001;
+}
+
+a {
+  color: var(--style-link-unvisited)
+}
+
+a:hover {
+  color: var(--style-link-visited)
+}
+
+/*
+  Header
+*/
 
 .header {
   display: flex;
@@ -104,11 +135,9 @@ body {
   background-color: transparent;
 }
 
-.decor-divider {
-  background-color: var(--title-accent-light);
-  height: var(--thin-border);
-  z-index: 1001;
-}
+/*
+  Footer
+*/
 
 .footer{
   padding: calc(0.25vw + 4px);
@@ -125,6 +154,10 @@ body {
   font-size: calc(0.9rem + 0.1vw);
   margin: 0;
 }
+
+/*
+  Sidebar
+*/
 
 .sidebar {
   display: flex;
@@ -193,6 +226,10 @@ body {
   color: var(--sidebar-text-visited);
   text-decoration: underline;
 }
+
+/*
+  Page Content
+*/
 
 .unheaded-area{
   display: flex;

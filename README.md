@@ -1,5 +1,5 @@
 # Rsbuild project
-
+TODO: FIX THIS (lazy)
 ## Setup
 
 Install the dependencies:
